@@ -1,0 +1,1071 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    padding: 4em 6em;
+    border-radius: 999px;
+    background-color: rgba(128, 128, 128, 0.103);
+    margin: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.logo.code {
+    color: #fff;
+}
+
+.logo.with {
+    color: #636262;
+}
+
+.logo.pascal {
+    color: #00ff88;
+    text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 15px#00ff88;
+}
+
+.pascal-txt {
+    color: #00ff8884;
+}
+
+.right-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.right-nav a, a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.6s;
+}
+
+.right-nav a:hover , a:hover{
+    color: #00ff88;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.full-page-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    position: relative; /* For positioning the arrow buttons later */
+    box-sizing: border-box; /* Ensure padding doesn't add to height */
+}
+
+
+.rotating-text-div h3 {
+    font-size: 62px;
+    margin-bottom: 20px;
+}
+
+.rotating-text-div p {
+    font-size: 84px;
+    color: #ccc;
+}
+
+
+.typewriter {
+    color: #00ff88;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 20px;
+}
+
+.cursor {
+    color: #00ff88;
+    font-weight: 300;
+    animation: blink 0.7s infinite;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5em;
+    /* animation-name: appear;
+    animation-timeline: view();
+    animation-range: entry 25% cover 50%; */
+}
+
+.autoShow{
+    animation: div-appear linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+
+
+@keyframes div-appear {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about h1 {
+    font-size: 48px;
+    color: #00ff88;
+}
+
+.about p {
+    font-size: 32px;
+    text-align: center;
+}
+
+.akktiv {
+    display: flex;
+    gap: 4em;
+}
+
+.busy {
+    font-size: 32px;
+    text-decoration: line-through;
+    color: #636262;
+}
+
+.active {
+    font-size: 32px;
+}
+
+.language-header {
+    font-size: 48px;
+    color: #00ff88;
+
+}
+
+#languages{
+    margin-top: 10em;
+    margin-bottom: -5em;
+}
+
+.projects {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+    vertical-align: top;
+    gap: 5em;
+    height: 600px;
+}
+.projects h1, .vibe-coded h2, .contact-me{
+    font-size: 48px;
+    color: #00ff88;
+}
+
+.project-div {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.project-description{
+    font-size: 20px;
+    font-weight: 500;
+    width: 90%;
+    text-align: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    width: 25em;
+    text-align: center;
+    gap: 3em;
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88d7, 0 0 15px #00ff8881;
+}
+
+
+
+
+.project-card img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.project-card h3{
+    font-weight: 600;
+    font-size: 30px;
+    color: #47eda0;
+}
+
+.vibe-coded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5em;
+}
+
+
+.skill {
+    width: 160px;
+    height: 160px;
+    /* background: cornflowerblue; */
+    position: relative;
+}
+
+.outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    font-weight: 600;
+    color: white;
+}
+
+
+.html circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: htmlProgress linear forwards;
+    animation-timeline: --languages-timeline;
+    animation-range: entry 10% contain 50%;
+}
+
+.css circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: cssProgress linear forwards;
+    animation-timeline: --languages-timeline;
+    animation-range: entry 10% contain 50%;
+}
+
+.js circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: jsProgress linear forwards;
+    animation-timeline: --languages-timeline;
+    animation-range: entry 10% contain 50%;
+}
+
+@keyframes jsProgress {
+    100% {
+        stroke-dashoffset: 140; /* Represents approx 70% skill */
+    }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.contact-me {
+    font-size: 48px;
+    color: #00ff88;
+    margin-bottom: 0.5em; /* Add specific margin to the header */
+}
+
+.contact img {
+    width: 26em;
+    height: 26em;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+    height: 34em;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+.phone {
+    position: absolute;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 255, 136, 0.3);
+}
+
+.phone:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.phone img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.phone a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.phone:hover img {
+    filter: invert(66%) sepia(61%) saturate(1633%) hue-rotate(87deg) brightness(101%) contrast(101%);
+}
+
+/* Style for Font Awesome icons inside the buttons */
+.phone a i {
+    font-size: 1.8em; /* Adjust size to match SVG icons */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.phone:hover a i {
+    color: #00ff88;
+}
+
+/* CIRCULAR ORBIT - Icons positioned like moons around earth */
+
+/* Each icon is placed at a specific angle (60deg apart) on a 17em radius circle */
+
+#email {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) translateY(-17em); /* -90 degrees */
+}
+#phone {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) translate(14.72em, -8.5em); /* -30 degrees */
+}
+#whatsapp {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) translate(14.72em, 8.5em); /* 30 degrees */
+}
+#twitter {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) translateY(17em); /* 90 degrees */
+}
+#tiktok {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) translate(-14.72em, 8.5em); /* 150 degrees */
+}
+#github {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) translate(-14.72em, -8.5em); /* 210 degrees */
+}
+
+/* The hover effect should apply the scale ON TOP of the existing transform */
+#email:hover {
+    transform: translate(-50%, -50%) translateY(-17em) scale(1.3);
+}
+#phone:hover {
+    transform: translate(-50%, -50%) translate(14.72em, -8.5em) scale(1.3);
+}
+#whatsapp:hover {
+    transform: translate(-50%, -50%) translate(14.72em, 8.5em) scale(1.3);
+}
+#twitter:hover {
+    transform: translate(-50%, -50%) translateY(17em) scale(1.3);
+}
+#tiktok:hover {
+    transform: translate(-50%, -50%) translate(-14.72em, 8.5em) scale(1.3);
+}
+#github:hover {
+    transform: translate(-50%, -50%) translate(-14.72em, -8.5em) scale(1.3);
+}
+
+@keyframes htmlProgress {
+    100% {
+        stroke-dashoffset: 72;
+    }
+}
+
+@keyframes cssProgress {
+    100% {
+        stroke-dashoffset: 98;
+    }
+}
+
+@keyframes jsProgress {
+    100% {
+        stroke-dashoffset: 400;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+/* Initially hide the phone number details */
+.phone .phone-number {
+    display: none;
+}
+
+/* Style for the expanded state of the phone icon */
+.phone.expanded {
+    width: 16em;           /* A comfortable width */
+    height: 7em;           /* Taller to fit content */
+    border-radius: 15px;   /* Boxy-pill shape */
+    background-color: #222;
+    border: 1px solid #00ff88;
+
+    /* Layout changes */
+    flex-direction: column;    /* Stack icon and details VERTICALLY */
+    justify-content: center; /* Center the content vertically */
+    align-items: center;     /* Center the content horizontally */
+    padding: 10px;
+    gap: 10px;               /* Space between icon and the details below it */
+
+    /* Ensure it stays on top */
+    z-index: 1000;
+}
+
+/* Style the icon when it's expanded */
+.phone.expanded img {
+    height: 2em; /* Control icon size in the expanded view */
+    width: auto;
+    filter: invert(66%) sepia(61%) saturate(1633%) hue-rotate(87deg) brightness(101%) contrast(101%);
+}
+
+/* Show and style the number container when expanded */
+.phone.expanded .phone-number {
+    display: flex;
+    flex-direction: column; /* Stack number and copy button */
+    align-items: center;
+    gap: 8px;
+    color: #00ff88;
+    animation: fadeIn 0.5s;
+    font-size: 1.1rem;
+}
+
+.copy-btn {
+    cursor: pointer;
+    border: 1px solid #00ff8884;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9rem;
+}
+
+.copy-btn:hover {
+    background-color: #00ff8844;
+}
+
+.copy-btn.copied {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    border-color: #00ff88;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.home {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 8rem;
+    text-align: left; 
+}
+
+.contact, .languages {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.languages {
+    flex-direction: row;
+    gap: 15em;
+}
+
+.rotating-text-div h3,
+.rotating-text-div p {
+    text-align: left;
+}
+
+.img-self img {
+    width: 38em;
+    height: 38em;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88, 0 0 80px #00ff88, 0 0 100px #00ff88;
+}
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 2em 3em;
+    }
+
+    .home {
+        padding: 4rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        text-align: center;
+    }
+
+    .rotating-text-div h3,
+    .rotating-text-div p {
+        text-align: center;
+    }
+
+    .img-self img {
+        width: 25em;
+        height: 25em;
+    }
+
+    .project-div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .projects {
+        height: auto;
+        padding-bottom: 4em;
+    }
+
+    .languages {
+        gap: 5em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* --- Global Mobile Resets --- */
+
+    .full-page-section {
+
+        min-height: auto; /* Allow content to dictate height on mobile */
+
+        padding: 4em 1.5em; /* Comfortable side padding */
+
+        height: auto;
+
+    }
+
+
+
+    /* --- Header & Nav --- */
+
+    header {
+
+        padding: 1em 1.5em;
+
+        margin: 0.5em;
+
+        border-radius: 20px;
+
+        width: calc(100% - 1em);
+
+    }
+
+
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 1em;
+
+    }
+
+
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+
+
+    .right-nav ul {
+
+        gap: 15px;
+
+        padding: 0;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+
+    .right-nav a, a {
+
+        font-size: 16px;
+
+    }
+
+
+
+    /* --- Home Section --- */
+
+    .home {
+
+        padding: 6rem 1rem 2rem 1rem;
+
+        gap: 1.5rem;
+
+    }
+
+
+
+    .rotating-text-div h3 {
+
+        font-size: 28px;
+
+        margin-bottom: 10px;
+
+    }
+
+    
+
+    .rotating-text-div p {
+
+        font-size: 32px;
+
+    }
+
+
+
+
+
+    /* --- About Section --- */
+
+    .about {
+
+        gap: 2em;
+
+    }
+
+
+
+    .about h1 {
+
+        font-size: 36px;
+
+    }
+
+
+
+    .about p {
+
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: left; /* Easier to read on mobile */
+        padding: 0;
+        width: 100%;
+
+    }
+
+
+
+    .akktiv {
+
+        gap: 2em;
+
+    }
+
+
+
+    .busy, .active {
+
+        font-size: 24px;
+
+    }
+
+
+
+    /* --- Projects Section --- */
+
+    .projects {
+
+        padding: 2em 1em;
+
+    }
+
+
+
+    .project-div {
+
+        flex-direction: column;
+
+        gap: 2em;
+
+        width: 100%;
+
+    }
+
+
+
+    .project-card {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 1.5em;
+
+    }
+
+    
+
+    .project-card h3 {
+
+        font-size: 24px;
+
+    }
+
+
+
+    .project-description {
+
+        font-size: 16px;
+
+    }
+
+
+
+    /* --- Languages Section --- */
+
+    .languages {
+
+        gap: 3em;
+
+        flex-direction: column; /* Stack them for clarity */
+
+    }
+
+
+
+    .language-header {
+
+        font-size: 36px;
+
+        margin-bottom: 1em;
+
+    }
+
+    
+
+    /* Fix language text merging issue */
+
+    .skill .inner {
+
+        position: relative;
+
+        z-index: 1; /* Ensure text is above SVG */
+
+    }
+
+
+
+
+
+    /* --- Contact Section (Horizontal line at bottom) --- */
+
+    .contact {
+
+        flex-direction: column;
+
+        margin-top: 1em;
+
+        width: 100%;
+
+        min-height: auto; /* Don't force full height on mobile anymore */
+
+        justify-content: flex-end; /* Push content to top, icons to bottom */
+
+    }
+
+    
+
+    .contact-me {
+
+        font-size: 36px;
+
+        margin-top: 0; /* Remove top margin that pushed it down */
+
+        margin-bottom: 1em;
+
+    }
+
+
+
+    /* Hide the abstract image on mobile to save space */
+
+    .contact img {
+
+        display: none;
+
+    }
+
+
+
+    /* Transform contact buttons into a horizontal flex row */
+
+    .contact-buttons {
+
+        position: relative; /* Reset absolute positioning */
+
+        top: auto;
+
+        left: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        height: auto;
+
+        border-radius: 0;
+
+        display: flex; /* Use flexbox */
+
+        flex-direction: row;
+
+        flex-wrap: nowrap; /* Force single line */
+        overflow-x: auto; /* Enable horizontal scrolling if items don't fit */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+
+        justify-content: space-evenly; /* Distribute space evenly */
+
+        align-items: center;
+
+        gap: 10px; /* Smaller gap between icons */
+
+        padding: 1em 0; /* Some padding for the row */
+
+        margin-top: auto; /* Push buttons to the bottom of the flex container */
+
+    }
+
+
+
+    /* Reset absolute positioning for icons and size them appropriately */
+
+    .phone, #email, #whatsapp, #twitter, #tiktok, #github {
+
+        position: relative; /* Reset absolute positioning */
+
+        top: auto !important;
+
+        left: auto !important;
+
+        transform: none !important;
+
+        width: 50px; /* Smaller square buttons */
+
+        height: 50px;
+
+        border-radius: 50%; /* Keep them circular */
+
+        background-color: rgba(255, 255, 255, 0.05);
+
+        border: 1px solid #00ff8844;
+
+        box-shadow: none;
+
+        margin: 0;
+        flex-shrink: 0; /* Prevent shrinking */
+
+    }
+
+
+
+    /* Style the inner content for the new grid layout */
+
+    .phone a, .phone {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+
+
+    .phone:hover {
+
+        transform: scale(1.1) !important; /* Simple lift on hover */
+
+        background-color: rgba(0, 255, 136, 0.1);
+
+        border-color: #00ff88;
+
+    }
+
+    
+
+    .phone.expanded {
+    width: auto; 
+    height: auto;
+    padding: 7px;
+    gap: 5px;
+    border-radius: 12px;
+    flex-direction: column; 
+    }
+
+
+    .phone img {
+
+        width: 28px; /* Fixed size for SVG icons */
+
+        height: 28px;
+
+        filter: brightness(0) invert(1); /* Ensure white color */
+
+    }
+
+
+    .phone a i {
+
+        font-size: 28px; /* Ensure visible size for Font Awesome icons */
+
+        color: #fff; /* Ensure white color */
+
+    }
+
+}
+
+
+
+/* Tiny Screens (max-width: 380px) */
+
+@media (max-width: 380px) {
+
+    .contact-buttons {
+
+        gap: 5px; /* Even smaller gap on tiny screens */
+
+    }
+
+    
+
+    .phone {
+
+        width: 45px; /* Slightly smaller icons */
+
+        height: 45px;
+
+    }
+
+    .phone img, .phone a i {
+
+        width: 24px;
+
+        height: 24px;
+
+        font-size: 24px;
+
+    }
+
+}
+}
+
+
