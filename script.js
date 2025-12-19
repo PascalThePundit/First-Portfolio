@@ -116,3 +116,59 @@ if (phoneIcon && copyBtn && phoneNumberText) {
     });
 }
 
+// --- Carousel Logic for Mobile ---
+document.addEventListener('DOMContentLoaded', () => {
+    function initCarousel() {
+        // Fallback for older browsers if :has isn't supported, 
+        // effectively we just look for our specific sections #projects and #vibe-coded
+        const projectSections = [document.querySelector('#projects'), document.querySelector('#vibe-coded')];
+
+        projectSections.forEach(section => {
+            if (!section) return;
+
+            const projectDiv = section.querySelector('.project-div');
+            const cards = projectDiv.querySelectorAll('.project-card');
+            const prevBtn = section.querySelector('.prev-btn');
+            const nextBtn = section.querySelector('.next-btn');
+
+            if (!cards.length || !prevBtn || !nextBtn) return;
+
+            let currentIndex = 0;
+
+            // Initialize: Show first card, hide others
+            const showCard = (index) => {
+                cards.forEach((card, i) => {
+                    if (i === index) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+            };
+
+            // Initial active state
+            showCard(currentIndex);
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex++;
+                if (currentIndex >= cards.length) {
+                    currentIndex = 0;
+                }
+                showCard(currentIndex);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = cards.length - 1;
+                }
+                showCard(currentIndex);
+            });
+        });
+    }
+
+    // Run carousel init if we are on mobile or resize to mobile
+    // Simple check: just run it, CSS handles visibility
+    initCarousel();
+});
+
