@@ -150,7 +150,7 @@ main {
 }
 
 .about p {
-    font-size: 20px; /* Reduced from 32px (huge) */
+    font-size: 28px; /* Reduced from 32px (huge) */
     text-align: center;
     line-height: 1.6;
 }
@@ -183,7 +183,7 @@ main {
 
 .projects {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     padding: 30px;
@@ -194,18 +194,19 @@ main {
     height: auto;
 }
 .projects h1, .vibe-coded h2, .contact-me{
-    font-size: 42px; /* Reduced from 48px */
+    font-size: 45px; /* Reduced from 48px */
     color: #00ff88;
 }
 
 .project-div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-    gap: 2em;
+    gap: 3em;
     width: 100%;
     max-width: 1000px; /* Constrain width to keep cards grouped */
     justify-items: center;
 }
+
 
 /* Specifically for the first project section: 2 cards per row */
 #projects .project-div {
@@ -220,7 +221,7 @@ main {
     text-align: center;
     color: #ddd;
     flex-grow: 1;
-    min-height: 5em;
+    min-height: 9em;
 }
 
 
@@ -376,6 +377,7 @@ svg {
     border-radius: 50%;
     position: relative;
     z-index: 1;
+    margin: -30px;
 }
 
 .contact-buttons {
@@ -607,6 +609,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .languages {
